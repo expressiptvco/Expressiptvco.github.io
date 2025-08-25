@@ -2,163 +2,374 @@
 <html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
+  <title>ExpressIPTV best iptv provider</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ExpressIPTV.co | High-Quality IPTV Streaming</title>
-  <meta name="description" content="ExpressIPTV.co - Watch your favorite channels and movies with stable, high-quality IPTV streaming. Compatible with all devices.">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <meta name="description" content="ExpressIPTV.co offers stable, high-quality IPTV streaming with 35,000+ Live TV channels and 165,000+ VOD. Works on all devices with 24/7 support and instant activation." />
+  <link rel="canonical" href="https://expressiptv.github.io/" />
+
+  <!-- Open Graph / Twitter SEO -->
+  <meta property="og:title" content="ExpressIPTV best iptv provider" />
+  <meta property="og:description" content="Stable IPTV, +35,000 Live TV & +165,000 VOD, all devices supported, 24/7 support, instant activation." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://expressiptv.github.io/" />
+  <meta property="og:image" content="https://expressiptv.co/wp-content/uploads/2018/02/ex1.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ExpressIPTV best iptv provider" />
+  <meta name="twitter:description" content="High-quality IPTV streaming with broad device support and 24/7 online help." />
+  <meta name="twitter:image" content="https://expressiptv.co/wp-content/uploads/2018/02/ex1.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
   <style>
     :root{
+      /* Brand palette aligned to logo (blue / cyan) */
       --bg:#f6f7fb;
       --text:#0f172a;
       --muted:#64748b;
-      --accent:#0ea5e9;
-      --accent-600:#0284c7;
       --card:#ffffff;
-      --shadow:0 10px 25px rgba(2, 8, 23, 0.08);
+      --accent:#0ea5e9;
+      --accent-700:#0369a1;
+      --accent-500:#22d3ee;
+      --ok:#16a34a;
+      --warn:#dc2626;
+      --shadow:0 10px 28px rgba(2,8,23,.08);
       --radius:16px;
     }
-    *{box-sizing:border-box;}
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
     body{
-      margin:0;
       background:var(--bg);
       color:var(--text);
-      font-family:'Inter',Tahoma,sans-serif;
-      line-height:1.8;
+      font-family:'Inter',system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      line-height:1.75;
     }
+    a{color:var(--accent-700);text-decoration:none}
+    a:hover{opacity:.9}
+
+    /* Header */
     header{
-      background:linear-gradient(135deg,#0ea5e9,#22d3ee);
-      color:#fff;
-      text-align:center;
-      padding:48px 20px;
+      background:linear-gradient(135deg,var(--accent),var(--accent-500));
+      color:#fff; text-align:center; padding:36px 16px 64px;
     }
-    header h1{
-      margin:0 0 8px;
-      font-size:34px;
-      font-weight:600;
+    .brand{
+      display:flex; align-items:center; justify-content:center; gap:12px; margin-bottom:8px;
     }
-    header p{
-      margin:0;
-      font-size:16px;
-      opacity:.95;
-    }
+    .brand img{height:42px; width:auto; border-radius:8px}
+    header h1{margin:0; font-size:30px; font-weight:800; letter-spacing:.2px}
+    header p{margin:6px 0 0; opacity:.95}
 
-    .container{
-      max-width:860px;
-      margin:-36px auto 60px;
-      padding:0 16px;
+    nav{
+      margin-top:18px; display:flex; gap:12px; flex-wrap:wrap; justify-content:center;
     }
+    nav a{
+      background:rgba(255,255,255,.18); color:#fff; padding:8px 14px; border-radius:999px; font-weight:600;
+      border:1px solid rgba(255,255,255,.28);
+    }
+    nav a:hover{background:rgba(255,255,255,.28)}
+
+    /* Card container */
+    .container{max-width:1080px; margin:-44px auto 56px; padding:0 16px}
     .card{
-      background:var(--card);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-      padding:28px;
+      background:var(--card); border-radius:var(--radius); box-shadow:var(--shadow);
+      padding:26px; margin-bottom:22px;
     }
+    .section-title{
+      margin:0 0 10px; font-size:22px; color:var(--accent-700); font-weight:800;
+    }
+    .lead{color:var(--muted); margin:0 0 8px}
 
-    .hero{
-      text-align:center;
-      margin-bottom:12px;
-    }
-    .hero h2{
-      margin:0 0 6px;
-      font-size:22px;
-      color:var(--accent);
-    }
-    .hero p{
-      margin:0;
-      color:var(--muted);
-      font-size:15px;
-    }
+    /* Features grid */
+    .features{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px 20px; padding:0; list-style:none; margin:12px 0 0}
+    .features li{background:#eef2f7; border-radius:12px; padding:12px 14px; font-size:14px}
 
-    .features{
-      margin:20px 0 0;
-      padding:0;
-      list-style:none;
-      display:grid;
-      grid-template-columns:repeat(2,minmax(0,1fr));
-      gap:10px 18px;
+    /* Plans */
+    .plans{display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:16px; margin-top:14px}
+    .plan{
+      border:1px solid #e5e7eb; border-radius:14px; padding:18px; background:#fff; position:relative;
+      display:flex; flex-direction:column; gap:10px; box-shadow:0 6px 18px rgba(2,8,23,.05);
     }
-    .features li{
-      background:#f1f5f9;
-      border-radius:12px;
-      padding:12px 14px;
-      font-size:14px;
+    .plan.popular{border-color:var(--accent); box-shadow:0 10px 28px rgba(14,165,233,.20)}
+    .badge{
+      position:absolute; top:12px; right:12px; background:var(--accent); color:#fff; padding:6px 10px; border-radius:999px; font-size:12px; font-weight:700;
     }
-
+    .plan h3{margin:0; font-size:18px}
+    .price{font-size:24px; font-weight:800; color:var(--accent-700)}
+    .bullets{padding:0; list-style:none; display:flex; flex-direction:column; gap:6px; margin:0}
+    .bullets li::before{content:"✓ "; color:var(--ok); font-weight:800}
     .cta{
-      margin-top:24px;
-      display:flex;
-      flex-wrap:wrap;
-      gap:12px;
-      justify-content:center;
+      margin-top:auto; display:flex; flex-wrap:wrap; gap:10px; justify-content:flex-start;
     }
     .btn{
-      display:inline-block;
-      padding:12px 22px;
-      border-radius:10px;
-      text-decoration:none;
-      font-size:15px;
-      font-weight:600;
-      background:var(--accent);
-      color:#fff;
-      box-shadow:0 6px 18px rgba(14,165,233,.28);
-      transition:transform .18s ease, background .2s ease;
+      display:inline-block; padding:10px 16px; border-radius:10px; font-weight:700; font-size:14px; text-decoration:none;
+      color:#fff; background:var(--accent); box-shadow:0 8px 22px rgba(14,165,233,.25); transition:transform .18s ease, background .2s ease;
     }
-    .btn:hover{
-      background:var(--accent-600);
-      transform:translateY(-2px);
+    .btn:hover{background:var(--accent-700); transform:translateY(-2px)}
+    .btn.ghost{background:transparent; color:var(--accent-700); border:1px solid var(--accent)}
+
+    /* Alerts / Notes */
+    .note{font-size:13px; color:var(--muted); margin-top:10px}
+    .disclaimer{
+      background:#fef2f2; border:1px solid #fecaca; color:#7f1d1d;
+      border-radius:12px; padding:14px; font-size:13px; margin-top:12px;
     }
 
-    .note{
-      margin-top:20px;
-      font-size:12.5px;
-      color:var(--muted);
-      text-align:center;
-    }
-    footer{
-      text-align:center;
-      color:#94a3b8;
-      font-size:13px;
-      padding:28px 12px;
-    }
+    /* Lists inside content */
+    .content ul{margin:8px 0 0}
+    .content li{margin:4px 0}
 
-    @media(max-width:600px){
-      header h1{font-size:26px;}
-      .features{grid-template-columns:1fr;}
+    /* Footer */
+    footer{color:#94a3b8; text-align:center; padding:30px 12px}
+
+    /* Responsive */
+    @media (max-width:960px){ .plans{grid-template-columns:repeat(2,minmax(0,1fr))} }
+    @media (max-width:620px){
+      header h1{font-size:24px}
+      .features{grid-template-columns:1fr}
+      .plans{grid-template-columns:1fr}
     }
   </style>
+
+  <!-- Structured Data (Organization + Offers) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ExpressIPTV.co",
+    "url": "https://expressiptv.github.io/",
+    "logo": "https://expressiptv.co/wp-content/uploads/2018/02/ex1.png",
+    "sameAs": [
+      "https://t.me/Ex_iPTV",
+      "https://expressiptv.co"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "OfferCatalog",
+    "name": "ExpressIPTV Plans",
+    "url": "https://expressiptv.github.io/",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "name": "Royal - 1 Month",
+        "price": "13.00",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock"
+      },
+      {
+        "@type": "Offer",
+        "name": "Royal - 3 Months",
+        "price": "30.00",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock"
+      },
+      {
+        "@type": "Offer",
+        "name": "Royal - 6 Months",
+        "price": "50.00",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock"
+      },
+      {
+        "@type": "Offer",
+        "name": "Royal - 1 Year (Popular)",
+        "price": "85.00",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock"
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
+  <!-- Header -->
   <header>
-    <h1>ExpressIPTV.co</h1>
-    <p>Stable IPTV Streaming • High Quality • Fast Support</p>
+    <div class="brand" aria-label="ExpressIPTV logo">
+      <img src="https://expressiptv.co/wp-content/uploads/2018/02/ex1.png" alt="ExpressIPTV logo" loading="lazy" decoding="async">
+      <h1>ExpressIPTV.co</h1>
+    </div>
+    <p>Stable IPTV Streaming • 35,000+ Live TV • 165,000+ VOD • 24/7 Support</p>
+
+    <nav aria-label="Primary">
+      <a href="#how">How it works</a>
+      <a href="#about">About</a>
+      <a href="#features">Features</a>
+      <a href="#plans">Plans</a>
+      <a href="#app">Android App</a>
+      <a href="#trial">Free Trial</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <div class="container">
-    <div class="card">
-      <div class="hero">
-        <h2>Watch Smarter, Faster, Better</h2>
-        <p>Enjoy unlimited access to your favorite channels, movies, and series — on any device, anytime.</p>
-      </div>
+  <main class="container">
 
+    <!-- How it Works -->
+    <section id="how" class="card">
+      <h2 class="section-title">How Does IPTV Work</h2>
+      <p class="lead">It works by Internet on all smart devices (TV, PC, Box, Phone...).</p>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="card content">
+      <h2 class="section-title">About Us</h2>
+      <p>Express IPTV is an online store, not only an IPTV provider. We sell the top 4 services among 200+ providers in the world that have been active since 2014. With a 24/7 monitoring team.</p>
+
+      <h3 class="section-title" style="font-size:18px">About 4 Providers</h3>
+      <p>You may experience different results on the same service compared with another customer—this is purely technical due to Internet routes, distance, and other network conditions. At least one of them will work great for you. If you are a new customer or have any problem, please contact us first to test different services.</p>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="card">
+      <h2 class="section-title">Key Features</h2>
       <ul class="features">
-        <li>✅ HD / Full HD / 4K Streaming</li>
-        <li>✅ Works on Smart TVs, Android, iOS, Windows & macOS</li>
-        <li>✅ Huge VOD Library with Regular Updates</li>
-        <li>✅ Fast Support & Easy Setup</li>
+        <li>Stable Connection</li>
+        <li>+35,000 Live TV & +165,000 VOD</li>
+        <li>All Devices Supported</li>
+        <li>HD, HEVC and 4K Quality</li>
+        <li>Free Installation</li>
+        <li>24/7 Online Support</li>
       </ul>
+      <p class="note">Availability of HD/4K depends on source and your Internet connection quality.</p>
+    </section>
 
-      <div class="cta">
-        <a class="btn" href="https://expressiptv.co" target="_blank" rel="noopener">Visit Website</a>
-        <a class="btn" href="https://t.me/ex_iptv" target="_blank" rel="noopener">Contact on Telegram</a>
-        <a class="btn" href="mailto:info@iptv.sale">Email Support</a>
+    <!-- Plans -->
+    <section id="plans" class="card">
+      <h2 class="section-title">Plans & Pricing</h2>
+      <div class="plans">
+
+        <article class="plan" aria-label="Royal 1 Month">
+          <h3>Royal — 1 Month</h3>
+          <div class="price">€ 13.00</div>
+          <ul class="bullets">
+            <li>+35,000 Channels</li>
+            <li>Movies +165,000</li>
+            <li>Series +30,000</li>
+            <li>Catchup = 3–4 Days</li>
+            <li>EPG Guide</li>
+            <li>✅ Free VPN</li>
+            <li>✅ Free Android App</li>
+            <li>✅ Free Smart TV App</li>
+            <li>Instant Activation</li>
+          </ul>
+          <div class="cta">
+            <a class="btn" href="https://expressiptv.co" target="_blank" rel="noopener">Get Started</a>
+            <a class="btn ghost" href="#contact">Ask Support</a>
+          </div>
+        </article>
+
+        <article class="plan" aria-label="Royal 3 Months">
+          <h3>Royal — 3 Months</h3>
+          <div class="price">€ 30.00</div>
+          <ul class="bullets">
+            <li>+35,000 Channels</li>
+            <li>Movies +165,000</li>
+            <li>Series +30,000</li>
+            <li>Catchup = 3–4 Days</li>
+            <li>EPG Guide</li>
+            <li>✅ Free VPN</li>
+            <li>✅ Free Android App</li>
+            <li>✅ Free Smart TV App</li>
+            <li>Instant Activation</li>
+          </ul>
+          <div class="cta">
+            <a class="btn" href="https://expressiptv.co" target="_blank" rel="noopener">Get Started</a>
+            <a class="btn ghost" href="#contact">Ask Support</a>
+          </div>
+        </article>
+
+        <article class="plan" aria-label="Royal 6 Months">
+          <h3>Royal — 6 Months</h3>
+          <div class="price">€ 50.00</div>
+          <ul class="bullets">
+            <li>+35,000 Channels</li>
+            <li>Movies +165,000</li>
+            <li>Series +30,000</li>
+            <li>Catchup = 3–4 Days</li>
+            <li>EPG Guide</li>
+            <li>✅ Free VPN</li>
+            <li>✅ Free Android App</li>
+            <li>✅ Free Smart TV App</li>
+            <li>Instant Activation</li>
+          </ul>
+          <div class="cta">
+            <a class="btn" href="https://expressiptv.co" target="_blank" rel="noopener">Get Started</a>
+            <a class="btn ghost" href="#contact">Ask Support</a>
+          </div>
+        </article>
+
+        <article class="plan popular" aria-label="Royal 1 Year">
+          <span class="badge">Popular</span>
+          <h3>Royal — 1 Year</h3>
+          <div class="price">€ 85.00</div>
+          <ul class="bullets">
+            <li>+35,000 Channels</li>
+            <li>Movies +165,000</li>
+            <li>Series +30,000</li>
+            <li>Catchup = 3–4 Days</li>
+            <li>EPG Guide</li>
+            <li>✅ Free VPN</li>
+            <li>✅ Free Android App</li>
+            <li>✅ Free Smart TV App</li>
+            <li>Instant Activation</li>
+          </ul>
+          <div class="cta">
+            <a class="btn" href="https://expressiptv.co" target="_blank" rel="noopener">Get Started</a>
+            <a class="btn ghost" href="#contact">Ask Support</a>
+          </div>
+        </article>
+
       </div>
+      <p class="note">Content availability and features (e.g., Catchup/EPG) may vary by provider and region.</p>
+    </section>
 
-      <p class="note">
-        Please make sure you comply with local streaming laws. Access only the content you have the right to watch.
+    <!-- Android App -->
+    <section id="app" class="card content">
+      <h2 class="section-title">ExpressIPTV Android App</h2>
+      <p><strong>Custom IPTV Smarters App launched! Android Platform</strong></p>
+      <ul>
+        <li>Easy Login: No URL needed. Works with all of our Providers (Luxury, Royal, VIP, Premium...)</li>
+        <li>Also ready to connect VPN profiles</li>
+      </ul>
+    </section>
+
+    <!-- Referral (Provided Persian text) -->
+    <section id="referral" class="card content">
+      <h2 class="section-title">Referral Program</h2>
+      <p dir="rtl" style="text-align:right">
+        به دوستات معرفی کن 1 و ماه رایگان بگیر هر دوست 1 ماه اضافه تر یا یک اشتراک  1 ماهه جدا
       </p>
-    </div>
-  </div>
+    </section>
+
+    <!-- Trial -->
+    <section id="trial" class="card content">
+      <h2 class="section-title">Trial IPTV — 24 Hours Free</h2>
+      <p>Get 24 hours access to all Sport / Movie / and VOD. All devices supported.</p>
+      <div class="cta">
+        <a class="btn" href="#contact">Request Free Trial</a>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="card content">
+      <h2 class="section-title">Contact & Support</h2>
+      <ul>
+        <li><strong>WhatsApp:</strong> <a href="https://wa.me/447520636866" rel="noopener" target="_blank">+44 7520636866</a></li>
+        <li><strong>Telegram (Support ID):</strong> <a href="https://t.me/Ex_iPTV" rel="noopener" target="_blank">@Ex_iPTV</a></li>
+        <li><strong>Email:</strong> <a href="mailto:info@IPTV.Sale">info@IPTV.Sale</a></li>
+        <li><strong>Working hours:</strong> All days of the week — 24/7 Online Support</li>
+      </ul>
+      <div class="disclaimer">
+        “Only the WhatsApp number and email on this page are official. Any other contacts claiming to represent this website are not valid. Please use only the information provided here to ensure authenticity.”
+      </div>
+      <p class="note">Please comply with your local laws and access only the content you have rights to watch.</p>
+    </section>
+
+  </main>
 
   <footer>
     © 2025 ExpressIPTV.co — All Rights Reserved
