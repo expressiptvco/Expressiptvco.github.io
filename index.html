@@ -101,19 +101,63 @@
     }
   }
   </script>
+
+  <style>
+    :root{
+      --bg:#f6f7fb;
+      --text:#0f172a;
+      --muted:#64748b;
+      --card:#ffffff;
+      --accent:#0ea5e9;
+      --accent-700:#0369a1;
+      --accent-500:#22d3ee;
+      --ok:#16a34a;
+      --warn:#dc2626;
+      --shadow:0 10px 28px rgba(2,8,23,.08);
+      --radius:16px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;line-height:1.75}
+    a{color:var(--accent-700);text-decoration:none}
+    a:hover{opacity:.9}
+    header{background:linear-gradient(135deg,var(--accent),var(--accent-500));color:#fff;text-align:center;padding:36px 16px 64px}
+    .brand img{height:42px;width:auto;border-radius:8px}
+    header h1{margin:0;font-size:30px;font-weight:800}
+    nav{margin-top:18px;display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+    nav a{background:rgba(255,255,255,.18);color:#fff;padding:8px 14px;border-radius:999px;font-weight:600;border:1px solid rgba(255,255,255,.28)}
+    nav a:hover{background:rgba(255,255,255,.28)}
+    .container{max-width:1080px;margin:-44px auto 56px;padding:0 16px}
+    .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:26px;margin-bottom:22px}
+    .section-title{margin:0 0 10px;font-size:22px;color:var(--accent-700);font-weight:800}
+    .lead{color:var(--muted);margin:0 0 8px}
+    .features{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 20px;list-style:none;margin:12px 0 0;padding:0}
+    .features li{background:#eef2f7;border-radius:12px;padding:12px 14px;font-size:14px}
+    .plans{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:14px}
+    .plan{border:1px solid #e5e7eb;border-radius:14px;padding:18px;background:#fff;position:relative;display:flex;flex-direction:column;gap:10px;box-shadow:0 6px 18px rgba(2,8,23,.05)}
+    .plan.popular{border-color:var(--accent);box-shadow:0 10px 28px rgba(14,165,233,.20)}
+    .badge{position:absolute;top:12px;right:12px;background:var(--accent);color:#fff;padding:6px 10px;border-radius:999px;font-size:12px;font-weight:700}
+    .plan h3{margin:0;font-size:18px}
+    .price{font-size:24px;font-weight:800;color:var(--accent-700)}
+    .bullets{padding:0;list-style:none;display:flex;flex-direction:column;gap:6px;margin:0}
+    .bullets li::before{content:"✓ ";color:var(--ok);font-weight:800}
+    .cta{margin-top:auto;display:flex;gap:10px;flex-wrap:wrap}
+    .btn{display:inline-block;padding:10px 16px;border-radius:10px;font-weight:700;font-size:14px;color:#fff;background:var(--accent);box-shadow:0 8px 22px rgba(14,165,233,.25);transition:.18s ease}
+    .btn:hover{background:var(--accent-700);transform:translateY(-2px)}
+    .btn.ghost{background:transparent;color:var(--accent-700);border:1px solid var(--accent)}
+    footer{color:#94a3b8;text-align:center;padding:30px 12px}
+    @media(max-width:960px){.plans{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:620px){header h1{font-size:24px}.features{grid-template-columns:1fr}.plans{grid-template-columns:1fr}}
+  </style>
 </head>
-
 <body>
-
   <!-- Header -->
   <header>
     <div class="brand" aria-label="ExpressIPTV logo">
       <a href="/" aria-label="Home">
-      <img src="https://expressiptvco.github.io/ex1.png" alt="ExpressIPTV logo" loading="lazy" decoding="async">
-    
-</a>
-
-</div>
+        <img src="https://expressiptvco.github.io/ex1.png" alt="ExpressIPTV logo">
+      </a>
+    </div>
+    <h1>ExpressIPTV — Best IPTV Provider</h1>
     <p>Stable IPTV Streaming • 35,000+ Live TV • 165,000+ VOD • 24/7 Support</p>
 
     <nav aria-label="Primary">
@@ -128,7 +172,6 @@
   </header>
 
   <main class="container">
-
     <!-- How it Works -->
     <section id="how" class="card">
       <h2 class="section-title">How Does IPTV Work</h2>
@@ -136,12 +179,9 @@
     </section>
 
     <!-- About -->
-    <section id="about" class="card content">
+    <section id="about" class="card">
       <h2 class="section-title">About Us</h2>
       <p>Express IPTV is an online store, not only an IPTV provider. We sell the top 4 services among 200+ providers in the world that have been active since 2014. With a 24/7 monitoring team.</p>
-
-      <h3 class="section-title" style="font-size:18px">About 4 Providers</h3>
-      <p>You may experience different results on the same service compared with another customer—this is purely technical due to Internet routes, distance, and other network conditions. At least one of them will work great for you. If you are a new customer or have any problem, please contact us first to test different services.</p>
     </section>
 
     <!-- Features -->
@@ -155,161 +195,41 @@
         <li>Free Installation</li>
         <li>24/7 Online Support</li>
       </ul>
-      <p class="note">Availability of HD/4K depends on source and your Internet connection quality.</p>
     </section>
 
     <!-- Plans -->
     <section id="plans" class="card">
       <h2 class="section-title">Plans & Pricing</h2>
       <div class="plans">
-
-        <article class="plan" aria-label="Royal 1 Month">
-          <h3>Royal — 1 Month</h3>
-          <div class="price">€ 13.00</div>
-          <ul class="bullets">
-            <li>+35,000 Channels</li>
-            <li>Movies +165,000</li>
-            <li>Series +30,000</li>
-            <li>Catchup = 3–4 Days</li>
-            <li>EPG Guide</li>
-            <li>✅ Free VPN</li>
-            <li>✅ Free Android App</li>
-            <li>✅ Free Smart TV App</li>
-            <li>Instant Activation</li>
-          </ul>
-          <div class="cta">
-            <a class="btn" href="#plans" target="_blank" rel="noopener">Get Started</a>
-            <a class="btn ghost" href="#contact">Ask Support</a>
-          </div>
-        </article>
-
-        <article class="plan" aria-label="Royal 3 Months">
-          <h3>Royal — 3 Months</h3>
-          <div class="price">€ 30.00</div>
-          <ul class="bullets">
-            <li>+35,000 Channels</li>
-            <li>Movies +165,000</li>
-            <li>Series +30,000</li>
-            <li>Catchup = 3–4 Days</li>
-            <li>EPG Guide</li>
-            <li>✅ Free VPN</li>
-            <li>✅ Free Android App</li>
-            <li>✅ Free Smart TV App</li>
-            <li>Instant Activation</li>
-          </ul>
-          <div class="cta">
-            <a class="btn" href="#plans" target="_blank" rel="noopener">Get Started</a>
-            <a class="btn ghost" href="#contact">Ask Support</a>
-          </div>
-        </article>
-
-        <article class="plan" aria-label="Royal 6 Months">
-          <h3>Royal — 6 Months</h3>
-          <div class="price">€ 50.00</div>
-          <ul class="bullets">
-            <li>+35,000 Channels</li>
-            <li>Movies +165,000</li>
-            <li>Series +30,000</li>
-            <li>Catchup = 3–4 Days</li>
-            <li>EPG Guide</li>
-            <li>✅ Free VPN</li>
-            <li>✅ Free Android App</li>
-            <li>✅ Free Smart TV App</li>
-            <li>Instant Activation</li>
-          </ul>
-          <div class="cta">
-            <a class="btn" href="#plans" target="_blank" rel="noopener">Get Started</a>
-            <a class="btn ghost" href="#contact">Ask Support</a>
-          </div>
-        </article>
-
-        <article class="plan popular" aria-label="Royal 1 Year">
-          <span class="badge">Popular</span>
-          <h3>Royal — 1 Year</h3>
-          <div class="price">€ 85.00</div>
-          <ul class="bullets">
-            <li>+35,000 Channels</li>
-            <li>Movies +165,000</li>
-            <li>Series +30,000</li>
-            <li>Catchup = 3–4 Days</li>
-            <li>EPG Guide</li>
-            <li>✅ Free VPN</li>
-            <li>✅ Free Android App</li>
-            <li>✅ Free Smart TV App</li>
-            <li>Instant Activation</li>
-          </ul>
-          <div class="cta">
-            <a class="btn" href="#plans" target="_blank" rel="noopener">Get Started</a>
-            <a class="btn ghost" href="#contact">Ask Support</a>
-          </div>
-        </article>
-
+        <!-- Plan cards (همونطور که داری) -->
       </div>
-      <p class="note">Content availability and features (e.g., Catchup/EPG) may vary by provider and region.</p>
     </section>
 
-    <!-- Android App -->
-    <section id="app" class="card content">
+    <!-- App -->
+    <section id="app" class="card">
       <h2 class="section-title">ExpressIPTV Android App</h2>
       <p><strong>Custom IPTV Smarters App launched! Android Platform</strong></p>
-      <ul>
-        <li>Easy Login: No URL needed. Works with all of our Providers (Luxury, Royal, VIP, Premium...)</li>
-        <li>Also ready to connect VPN profiles</li>
-      </ul>
     </section>
 
-    <!-- Referral (Provided Persian text) -->
-<section id="referral" class="card content">
-  <h2 class="section-title">Referral Program</h2>
-  <p><strong>Refer a friend — get 1 month free.</strong></p>
-  <p>
-    Invite your friends to ExpressIPTV. For every friend who activates any plan,
-    you’ll receive <strong>one extra month</strong> added to your current subscription
-    or a <strong>separate 1-month subscription code</strong> — your choice.
-  </p>
-  <ul>
-    <li>Step 1: Share our website or your username with your friend.</li>
-    <li>Step 2: Your friend signs up and activates a plan.</li>
-    <li>Step 3: Contact support via WhatsApp or email with both details to claim your reward.</li>
-  </ul>
-  <p class="note">
-    Rewards are issued after activation is confirmed. Non-transferable. Cannot be exchanged for cash.
-  </p>
-  <div class="cta">
-    <a class="btn" href="#contact">Refer Now</a>
-  </div>
-</section>
-
-
     <!-- Trial -->
-    <section id="trial" class="card content">
+    <section id="trial" class="card">
       <h2 class="section-title">Trial IPTV — 24 Hours Free</h2>
       <p>Get 24 hours access to all Sport / Movie / and VOD. All devices supported.</p>
-      <div class="cta">
-        <a class="btn" href="#contact">Request Free Trial</a>
-      </div>
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="card content">
+    <section id="contact" class="card">
       <h2 class="section-title">Contact & Support</h2>
       <ul>
-        <li><strong>WhatsApp:</strong> <a href="https://wa.me/447520636866" rel="noopener" target="_blank">+44 7520636866</a></li>
-        <li><strong>Telegram (Support ID):</strong> <a href="https://t.me/Ex_iPTV" rel="noopener" target="_blank">@Ex_iPTV</a></li>
+        <li><strong>WhatsApp:</strong> <a href="https://wa.me/447520636866" target="_blank" rel="noopener">+44 7520636866</a></li>
+        <li><strong>Telegram:</strong> <a href="https://t.me/Ex_iPTV" target="_blank" rel="noopener">@Ex_iPTV</a></li>
         <li><strong>Email:</strong> <a href="mailto:info@IPTV.Sale">info@IPTV.Sale</a></li>
-        <li><strong>Working hours:</strong> All days of the week — 24/7 Online Support</li>
       </ul>
-      <div class="disclaimer">
-        “Only the WhatsApp number and email on this page are official. Any other contacts claiming to represent this website are not valid. Please use only the information provided here to ensure authenticity.”
-      </div>
-      <p class="note">Please comply with your local laws and access only the content you have rights to watch.</p>
     </section>
-
   </main>
 
   <footer>
     © 2025 ExpressIPTV — All Rights Reserved
   </footer>
-
 </body>
 </html>
