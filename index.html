@@ -133,65 +133,92 @@
   </style>
 
   <!-- Structured Data (Organization + Offers) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "ExpressIPTV",
-    "url": "https://expressiptv.github.io/",
-    "logo": "https://expressiptvco.github.io/ex1.png",
-    "sameAs": [
-      "https://t.me/Ex_iPTV",
-      "expressiptv"
-    ]
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "OfferCatalog",
-    "name": "ExpressIPTV Plans",
-    "url": "https://expressiptv.github.io/",
-    "itemListElement": [
+ <script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "name":"ExpressIPTV",
+  "url":"https://expressiptv.github.io/",
+  "logo":"https://expressiptvco.github.io/ex1.png",
+  "sameAs":[
+    "https://t.me/Ex_iPTV",
+    "https://github.com/expressiptv"
+  ],
+  "contactPoint":[
+    {
+      "@type":"ContactPoint",
+      "contactType":"customer support",
+      "email":"info@IPTV.Sale",
+      "availableLanguage":["en"],
+      "areaServed":"EU"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Service",
+  "name":"ExpressIPTV Plans",
+  "provider":{
+    "@type":"Organization",
+    "name":"ExpressIPTV",
+    "url":"https://expressiptv.github.io/"
+  },
+  "areaServed":"Worldwide",
+  "hasOfferCatalog":{
+    "@type":"OfferCatalog",
+    "name":"Plans",
+    "itemListElement":[
       {
-        "@type": "Offer",
-        "name": "Royal - 1 Month",
-        "price": "13.00",
-        "priceCurrency": "EUR",
-        "availability": "https://schema.org/InStock"
+        "@type":"Offer",
+        "name":"Royal — 1 Month",
+        "priceCurrency":"EUR",
+        "price":"13.00",
+        "url":"https://expressiptv.github.io/#plans",
+        "availability":"https://schema.org/InStock"
       },
       {
-        "@type": "Offer",
-        "name": "Royal - 3 Months",
-        "price": "30.00",
-        "priceCurrency": "EUR",
-        "availability": "https://schema.org/InStock"
+        "@type":"Offer",
+        "name":"Royal — 3 Months",
+        "priceCurrency":"EUR",
+        "price":"30.00",
+        "url":"https://expressiptv.github.io/#plans",
+        "availability":"https://schema.org/InStock"
       },
       {
-        "@type": "Offer",
-        "name": "Royal - 6 Months",
-        "price": "50.00",
-        "priceCurrency": "EUR",
-        "availability": "https://schema.org/InStock"
+        "@type":"Offer",
+        "name":"Royal — 6 Months",
+        "priceCurrency":"EUR",
+        "price":"50.00",
+        "url":"https://expressiptv.github.io/#plans",
+        "availability":"https://schema.org/InStock"
       },
       {
-        "@type": "Offer",
-        "name": "Royal - 1 Year (Popular)",
-        "price": "85.00",
-        "priceCurrency": "EUR",
-        "availability": "https://schema.org/InStock"
+        "@type":"Offer",
+        "name":"Royal — 1 Year (Popular)",
+        "priceCurrency":"EUR",
+        "price":"85.00",
+        "url":"https://expressiptv.github.io/#plans",
+        "availability":"https://schema.org/InStock"
       }
     ]
   }
-  </script>
+}
+</script>
+
 </head>
 <body>
 
   <!-- Header -->
   <header>
     <div class="brand" aria-label="ExpressIPTV logo">
+      <a href="/" aria-label="Home">
       <img src="https://expressiptvco.github.io/ex1.png" alt="ExpressIPTV logo" loading="lazy" decoding="async">
-    </div>
+    
+</a>
+
+</div>
     <p>Stable IPTV Streaming • 35,000+ Live TV • 165,000+ VOD • 24/7 Support</p>
 
     <nav aria-label="Primary">
